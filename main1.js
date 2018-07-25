@@ -14,11 +14,11 @@ for(let i=0; i<allButtons.length+1; i++){
     })
 }
 
-n = 0
+n = 1
 var timer = setInterval(()=>{
     n += 1
     $(`.buttons > span:nth-child(${x(n)})`).trigger('click')
-}, 4000)
+}, 3000)
 
 $('.window').on('mouseenter', function(){
     window.clearInterval(timer)
@@ -28,15 +28,15 @@ $('.window').on('mouseleave', function(){
     timer = setInterval(()=>{
         n += 1
         $(`.buttons > span:nth-child(${x(n)})`).trigger('click')
-    }, 4000)
+    }, 3000)
 })
 
 // 下面不用看
 function x(n){
     if(n>allImages.length){
-        n = n%5
+        n = n%allImages.length
         if(n===0){
-            n = 5
+            n = allImages.length
         }
     }
     return n
