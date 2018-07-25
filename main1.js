@@ -10,6 +10,7 @@ for(let i=0; i<allButtons.length+1; i++){
             $(`.images > img.leave`).addClass('enter').removeClass('leave current')
             })
         $(`.images > img:nth-child(${i})`).addClass('current').removeClass('enter leave')
+        $(`.buttons > span:nth-child(${i}`).addClass('highlight').siblings('.highlight').removeClass('highlight')
         n = index + 1
     })
 }
