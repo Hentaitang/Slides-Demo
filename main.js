@@ -26,7 +26,6 @@ $('.window').on('mouseleave', function(){
 
 
 
-
 // 下面不用看
 function x(n){
     if(n>5){
