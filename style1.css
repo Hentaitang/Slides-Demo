@@ -28,7 +28,6 @@
 .images > img.current{
     left: 0;
     z-index: 1;
-    opacity: 1;
 }
 
 .images > img.enter{
@@ -39,7 +38,6 @@
 .images > img.leave{
     left: -100%;
     z-index: 0;
-    opacity: 0;
 }
 
 .window > .buttons{
