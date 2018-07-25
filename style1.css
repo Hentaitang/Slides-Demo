@@ -41,3 +41,25 @@
     z-index: 0;
     opacity: 0;
 }
+
+.window > .buttons{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 10px auto;
+    transform: translateX(-50%);
+}
+
+.buttons > span{
+    border: 1px solid #CBCBCB;
+    margin: 0 5px;
+    float: left;
+    display: block;
+    background-color: #CBCBCB;
+    width: 30px;
+    height: 8px;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+}

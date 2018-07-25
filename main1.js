@@ -1,5 +1,17 @@
 let n
 initialization()
+var allButtons = $('.window > .buttons > span')
+var allImages = $('.window > .images > img')
+for(let i=0; i<allButtons.length+1; i++){
+    $(`.buttons > span:nth-child(${i})`).on('click',function(){
+        $('.images > img.current').addClass('leave').removeClass('current enter')
+        .one('transitionend', ()=>{
+            $(`.images > img.leave`).addClass('enter').removeClass('leave current')
+            })
+        $(`.images > img:nth-child(${i})`).addClass('current').removeClass('enter leave')
+    })
+}
+
 var timer = setInterval(()=>{
     Leave(n).one('transitionend', ()=>{
         Enter(n)
@@ -29,7 +41,7 @@ $('.window').on('mouseleave', function(){
 
 // 下面不用看
 function x(n){
-    if(n>5){
+    if(n>allImages.length){
         n = n%5
         if(n===0){
             n = 5
